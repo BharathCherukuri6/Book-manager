@@ -1,0 +1,20 @@
+<button class="btn btn-secondary" (click)="get()">Get Books</button>
+<button class="btn btn-secondary" (click)="post()">Add Book</button>
+
+
+<div class="row">
+@for (user of users; track $index) {
+
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+      <img src="{{user.id}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{user.title}}</h5>
+        <p class="card-text">{{user.author}}</p>
+        <a  (click)="deleteBook(user.id)" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
+<br>
+}
+</div>
